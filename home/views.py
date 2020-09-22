@@ -45,7 +45,7 @@ def ussdapp (request):
         elif num == '1*1' and int (len(level))==4 and str(level[3]) in str(level):
             response = "CON Enter PIN \n"
         elif num == '1*1' and int (len(level))==5 and str(level[4]) in str(level): 
-            response = 'CON Money sent' 
+            response = 'END Money sent' 
 
 
         else:
