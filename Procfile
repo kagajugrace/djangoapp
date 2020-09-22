@@ -1,1 +1,1 @@
-web: gunicorn ussd.wsgi
+web: gunicorn ussd.wsgi --log-file -
