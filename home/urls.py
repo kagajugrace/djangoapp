@@ -3,7 +3,8 @@ from .import views
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns=[
-path('', views.welcome, name='home'),
-path('About-Us/', views.about, name='about'),
-path('ussdapp/', views.ussdapp, name='ussdapp')
+    path('', views.welcome, name='home'),
+    path('About-Us/', views.about, name='about'),
+    path('ussdapp/', views.ussdapp, name='ussdapp'),
+    path('ussdmobi/', views.ussdmobi, name='ussmobi')
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
