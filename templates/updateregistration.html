@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block content %}
+<div class="pricing-header  text-center">
+    <h1 class="display-4">Application</h1>
+    <p class="lead">Register</p>
+</div>
+
+<div class="container">
+   <div class="form-group ">
+       <p class="alert alert-warning">{{message}}</p>
+       <form method="POST" action="{% url 'updateInfos' id=update.id %}" >
+           {% csrf_token %}
+           <input type="text" name="firstname" Value ="{{update.firstname}}" placeholder="Enter firstname" class="form-control"><br>
+           <input type="text" name="lastname" Value ="{{update.lastname}}" placeholder="Enter lastname" class="form-control"><br>
+           <input type="text" name="telephone" Value ="{{update.telephone}}" placeholder="Enter telephone number" class="form-control"><br>
+           <input type="submit" value="Register" name="register" class="form-control bg-success">
+       </form>  
+
+   </div>
+</div>
+<div class="table">
+ <table>
+  <tr><td>id</td><td>first name</td><td>last name</td><td>telephone</td></tr>
+
+  {% for x in data %}
+  <tr><td>{{x.id}}</td><td>{{ x.firstname }}</td><td>{{ x.lastname }}</td><td>{{ x.telephone }}</td>
+  <td><a href="{% url 'deleteInfos' id=x.id %}"> <span class= "btn btn-danger">Delete</span></a></td>
+  <td><a href="{% url 'updateInfos' id=x.id %}"><span class= "btn btn-info">Update</span></td>
+</tr>
+  {% endfor %}
+ </table>
+</div>
+{% endblock %}

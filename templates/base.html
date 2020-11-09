@@ -19,7 +19,7 @@ body {
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-gray-300 p-3">
+        <nav class="navbar navbar-expand-md  fixed-top bg-gray-300 p-3">
             <a class="navbar-brand" href="#" style="font-family: 'Aclonica', sans-serif;
             font-family: 'Alata', sans-serif;
             font-family: 'Comfortaa', cursive;">popschool</a>
@@ -29,19 +29,22 @@ body {
             <div class="collapse navbar-collapse" id="navbarCollapse ">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a class="nav-link px-2 text-purple-700 hover:text-blue-300" href="{% url 'home' %}" >Home</a>
+                  <a class="nav-link px-2 text-blue-900 hover:text-blue-300 " href="{% url 'home' %}" >Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link px-2 text-purple-300 hover:text-blue-300" href="{% url 'about' %}">About</a>
+                  <a class="nav-link px-2 text-blue-900 hover:text-blue-300" href="{% url 'about' %}">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link px-2 text-gray-700 font-semibold rounded hover:text-blue-300 " href="#" >Sponsor</a>
+                  <a class="nav-link px-2 text-blue-900  hover:text-blue-300 " href="{% url 'register' %}" >Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-2 text-gray-700 font-semibold rounded hover:text-blue-300" href="#" >Contributors</a>
+                  <a class="nav-link px-2 text-blue-900  hover:text-blue-300 " href="#" >Sponsor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-2 text-blue-900  hover:text-blue-300" href="#" >Contributors</a>
                   </li>
               </ul>
-                <button class="bg-purple-800 text-white hover:bg-purple-800 hover:text-blue-300 py-1 px-4 border-solid border-2 border-blue-900" style="border-radius:20px;">Become a sponsor</button>
+                <button class="bg-purple-800 text-white hover:bg-blue-800 hover:text-blue-300 py-1 px-4 border-solid border-2 border-blue-900" style="border-radius:20px">Become a sponsor</button>
               
             </div>
           </nav>
